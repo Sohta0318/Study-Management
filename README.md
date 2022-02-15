@@ -23,4 +23,4 @@ Things you may want to cover:
 
 - ...
 
-<!-- page js needs to be fixed, create work layout, contact(websocket) -->
+<!-- create work layout, contact(websocket) -->
