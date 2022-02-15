@@ -1,0 +1,22 @@
+<div class="message-wrapper">
+<%# <%= render 'contact' %> 
+<p id='paragraph'></p>
+<div class="message-container">
+<%= render @messages %>
+</div>
+
+<% if true %>
+<%= form_with url: messages_path  do |f|%>
+         <%= f.label :name, 'Name' %>
+  <%= f.text_field :name %>
+  <%= f.submit "submit" %>
+        <% end %>
+  <% else %>
+  <%= form_with model: @message  do |f|%>
+        <%=f.text_field :message%>
+        <%=f.submit id: 'button'%>
+        <% end %>
+<% end %>
+
+<%= @userName%>
+        </div>

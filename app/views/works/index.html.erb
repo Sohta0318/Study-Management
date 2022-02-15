@@ -1,0 +1,13 @@
+<h1 class='uppercase text-2xl subpixel-antialiased font-bold tracking-wide'>All Your Works</h1>
+<div class="flickr_pagination pagi">
+    <%= will_paginate @works, :container => false %>
+  </div>
+<div class="grid grid-cols-3 gap-6">
+<%= render partial: 'work', collection: @works %>
+</div>
+<div class="flickr_pagination pagi">
+    <%= will_paginate @works, :container => false %>
+  </div>
+
+
+
