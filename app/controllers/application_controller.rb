@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  private 
+  helper_method :logged_in, :require_user
   def after_sign_in_path_for(resource)
     works_path # ログイン後に遷移するpathを設定
   end
