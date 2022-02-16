@@ -305,6 +305,9 @@
   margin-top: 5em;
 }
 
-p {
-  font-size: 3em;
+#linkTag {
+  width: 100px;
+}
+#mainView {
+  width: 100px;
 }

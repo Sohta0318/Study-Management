@@ -4,6 +4,8 @@ import "controllers";
 import "chartkick";
 import "Chart.bundle";
 
+console.log("again");
+
 document.addEventListener("click", () => {
   setTimeout(() => {
     const button = document.getElementById("button");
@@ -19,8 +21,6 @@ document.addEventListener("click", () => {
 // For index
 if (document.getElementById("outer3")) {
   document.getElementById("outer3").addEventListener("click", toggleState3);
-
-  console.log("hello");
   function toggleState3() {
     let galleryView = document.getElementById("galleryView");
     let tilesView = document.getElementById("tilesView");
