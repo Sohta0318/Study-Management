@@ -175,7 +175,7 @@
 #slider3 {
   height: 36px;
   width: 46px;
-  /* background-color: orange; */
+  background-color: black;
   border-radius: 3px;
   transition: all 0.5s;
 }
@@ -186,7 +186,7 @@
   -o-transform: translatex(50px);
   transform: translatex(50px);
   transition: all 0.5s;
-  /* background-color: orange; */
+  background-color: rgba(8, 8, 163, 0.507);
 }
 
 #outer3.outerActive {
@@ -303,4 +303,8 @@
 .create-work {
   margin: auto;
   margin-top: 5em;
+}
+
+p {
+  font-size: 3em;
 }
