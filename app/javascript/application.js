@@ -51,17 +51,12 @@ if (document.getElementById("outer3")) {
   }
 
   let imgObject = [
-    "https://storage.googleapis.com/happimet/assets/images/line_chart.png",
-    "https://storage.googleapis.com/happimet/assets/images/line_chart.png",
-    "https://storage.googleapis.com/happimet/assets/images/line_chart.png",
-    "https://storage.googleapis.com/happimet/assets/images/line_chart.png",
-    "https://storage.googleapis.com/happimet/assets/images/line_chart.png",
-    "https://storage.googleapis.com/happimet/assets/images/line_chart.png",
-    "https://storage.googleapis.com/happimet/assets/images/line_chart.png",
-    "https://storage.googleapis.com/happimet/assets/images/line_chart.png",
-    "https://storage.googleapis.com/happimet/assets/images/line_chart.png",
-    "https://storage.googleapis.com/happimet/assets/images/line_chart.png",
-    "https://storage.googleapis.com/happimet/assets/images/line_chart.png",
+    "https://storage.googleapis.com/happimet/assets/images/group_member_page.png",
+    "https://storage.googleapis.com/happimet/assets/images/service_description_img/diaries_list.png",
+    "https://storage.googleapis.com/happimet/assets/images/service_description_img/metrics.png",
+    "https://storage.googleapis.com/happimet/assets/images/group_page.png",
+    "https://storage.googleapis.com/happimet/assets/images/service_description_img/record.png",
+    "https://storage.googleapis.com/happimet/assets/images/service_description_img/record_reason.png",
   ];
 
   let mainImg = 0;
@@ -71,6 +66,7 @@ if (document.getElementById("outer3")) {
   function loadGallery() {
     let mainView = document.getElementById("mainView");
     mainView.style.background = "url(" + imgObject[mainImg] + ")";
+    mainView.style.backgroundSize = "cover";
 
     let leftView = document.getElementById("leftView");
     leftView.style.background = "url(" + imgObject[prevImg] + ")";
@@ -169,5 +165,3 @@ if (output) {
     output.innerText = "Please input your email";
   });
 }
-
-console.log("fixed?");

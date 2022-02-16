@@ -306,8 +306,10 @@
 }
 
 #linkTag {
-  width: 100px;
+  /* object-fit: contain;
+  background-size: contain; */
 }
 #mainView {
-  width: 100px;
+  /* background-size: cover; */
+  /* width: 300px; */
 }
