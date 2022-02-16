@@ -4,8 +4,6 @@ import "controllers";
 import "chartkick";
 import "Chart.bundle";
 
-console.log("again");
-
 document.addEventListener("click", () => {
   setTimeout(() => {
     const button = document.getElementById("button");
@@ -171,3 +169,5 @@ if (output) {
     output.innerText = "Please input your email";
   });
 }
+
+console.log("fixed?");
