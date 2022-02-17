@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :works
   get 'graph', to: 'works#graph'
   resources :messages
+  resources :members
 end
