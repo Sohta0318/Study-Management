@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get 'graph', to: 'works#graph'
   resources :messages
   resources :members
+  get 'friends', to: 'members#friends'
 end
