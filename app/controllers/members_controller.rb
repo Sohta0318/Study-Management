@@ -18,7 +18,16 @@ class MembersController < ApplicationController
   def show
   @friends = current_user.friends
   end
-  def destroy;end
+  def destroy
+    friend = current_user.friendships.find_by(friend_id:params[:id])
+    if friend.destroy
+      flash[:notice] = 'You successfully deleted'
+      redirect_to friends_path
+    else
+      flash[:alert] = 'Somethings went wrong'
+      redirect_to friends_path
+    end
+  end
 
   def friends
   @friends = current_user.friends
