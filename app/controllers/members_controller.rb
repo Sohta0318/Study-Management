@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
   before_action :require_user
   def index
-  @members = User.all
+  @members = User.where.not(id: current_user)
   end
   def create
     friend = User.find(params[:friend])
