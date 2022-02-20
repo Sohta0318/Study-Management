@@ -16,7 +16,9 @@ class MembersController < ApplicationController
   end
   def edit;end
   def show
-  @friends = current_user.friends
+    friend = User.find(params[:id])
+    all_works = friend.works
+    @works =all_works.paginate(page: params[:page], per_page: 6)
   end
   def destroy
     friend = current_user.friendships.find_by(friend_id:params[:id])
@@ -31,5 +33,11 @@ class MembersController < ApplicationController
 
   def friends
   @friends = current_user.friends
+  end
+
+  def graph
+    friend = User.find(params[:id])
+    works = friend.works
+    @work_data = works.group_by_day(:created_at).sum(:hours)
   end
 end

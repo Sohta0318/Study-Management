@@ -1,2 +1,4 @@
-<p><%= friend.email%></p>
+<p><%=friend.email%></p>
+<%= link_to 'See Details', member_path(friend) %>
+<%= link_to 'See Graph', test_path(friend) %>
 <%= button_to 'unfollow', member_path(friend), method: :delete %>

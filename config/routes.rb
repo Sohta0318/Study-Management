@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   resources :messages
   resources :members
   get 'friends', to: 'members#friends'
+  get 'graph/:id', to: 'members#graph', as: :test
 end
