@@ -1,1 +1,14 @@
-<%= render partial: 'member', collection: @members %>
+
+
+<table class="table-auto">
+  <thead>
+    <tr>
+      <th>E-mail</th>
+      <th>Works</th>
+      <th>Follow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: 'member', collection: @members %>
+  </tbody>
+</table>

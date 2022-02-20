@@ -1,2 +1,7 @@
-<p><%= member.email%></p>
-<%= button_to 'Add to friend', members_path(friend: member),method: :post, :disabled => @current_user.friendships.exists?(friend_id: member) %>
+
+
+<tr>
+      <td><%= member.email%></td>
+      <td><%= member.works.count%></td>
+      <td><%= button_to 'Add to friend', members_path(friend: member),method: :post, :disabled => @current_user.friendships.exists?(friend_id: member) %></td>
+    </tr>

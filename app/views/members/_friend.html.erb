@@ -1,8 +1,13 @@
-<p><%=friend.email%></p>
-<% if @current_user.friendships.exists?(friend_id: friend.id) && friend.friendships.exists?(friend_id: @current_user) %>
+
+
+<tr>
+      <td><%=friend.email%></td>
+      <td><%= friend.works.count%></td>
+      <td><% if @current_user.friendships.exists?(friend_id: friend.id) && friend.friendships.exists?(friend_id: @current_user) %>
 <%= link_to 'See Details', member_path(friend) %>
 <%= link_to 'See Graph', test_path(friend) %>
 <% else %>
   <p>You are not followed yet!</p>
 <% end %>
-<%= button_to 'unfollow', member_path(friend), method: :delete %>
+<%= button_to 'unfollow', member_path(friend), method: :delete %></td>
+    </tr>
