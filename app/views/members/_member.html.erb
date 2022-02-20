@@ -1,2 +1,2 @@
 <p><%= member.email%></p>
-<%= button_to 'Add to friend', members_path(friend: member),method: :post %>
+<%= button_to 'Add to friend', members_path(friend: member),method: :post, :disabled => @current_user.friendships.exists?(friend_id: member) %>

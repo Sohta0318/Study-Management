@@ -2,6 +2,7 @@ class MembersController < ApplicationController
   before_action :require_user
   def index
   @members = User.where.not(id: current_user)
+  @current_user = current_user
   end
   def create
     friend = User.find(params[:friend])
@@ -33,6 +34,7 @@ class MembersController < ApplicationController
 
   def friends
   @friends = current_user.friends
+  @current_user = current_user
   end
 
   def graph
