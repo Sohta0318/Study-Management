@@ -35,6 +35,7 @@ class MembersController < ApplicationController
   def friends
   @friends = current_user.friends
   @current_user = current_user
+  @some = @friends.any?
   end
 
   def graph

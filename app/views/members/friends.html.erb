@@ -1,5 +1,5 @@
-
-<table class="table-auto">
+<% if @some %>
+  <table class="table-auto">
   <thead>
     <tr>
       <th>E-mail</th>
@@ -11,3 +11,7 @@
 <%= render partial: 'friend', collection: @friends %>
   </tbody>
 </table>
+<% else %>
+No friends! Start following?
+<%= link_to 'See all Members', members_path %>
+<% end %>
