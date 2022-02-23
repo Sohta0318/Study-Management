@@ -54,6 +54,7 @@ class WorksController < ApplicationController
   def graph
     works = current_user.works
     @work_data = works.group_by_day(:created_at).sum(:hours)
+    @kinds = current_user.works.group(:health).count
   end
   private
 

@@ -1,13 +1,15 @@
 
 
-<tr>
-      <td><%=friend.email%></td>
-      <td><%= friend.works.count%></td>
-      <td><% if @current_user.friendships.exists?(friend_id: friend.id) && friend.friendships.exists?(friend_id: @current_user) %>
-<%= link_to 'See Details', member_path(friend) %>
-<%= link_to 'See Graph', test_path(friend) %>
+<tr class="bg-gray-100">
+      <td class="border px-4 py-2"><%=friend.email%></td>
+      <td class="border px-4 py-2 count"><%= friend.works.count%></td>
+      <td class="border px-4 py-2"><% if @current_user.friendships.exists?(friend_id: friend.id) && friend.friendships.exists?(friend_id: @current_user) %>
+      <div class="flex">
+<%= link_to 'Details', member_path(friend), class: 'mr-6' %>
+<%= link_to 'Graph', test_path(friend) %>
+</div>
 <% else %>
   <p>You are not followed yet!</p>
 <% end %>
-<%= button_to 'unfollow', member_path(friend), method: :delete %></td>
+<%= button_to 'unfollow', member_path(friend), method: :delete, class: "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-3 rounded-full" %></td>
     </tr>

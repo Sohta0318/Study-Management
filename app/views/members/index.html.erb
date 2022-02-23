@@ -1,14 +1,26 @@
-
+<div class="container block p-6 max-w-md">
+<%= form_with url: members_path, method: :get, class: "w-full max-w-sm test my-12", local: true do |form|%>
+<div class="flex items-center border-b border-teal-500 py-2">
+<%= form.text_field :search,placeholder: 'Please enter email', class: "appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"%>
+<%= form.submit 'Search', name: nil, class: "flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" %>
+</div>
+<% end %>
 
 <table class="table-auto">
   <thead>
     <tr>
-      <th>E-mail</th>
-      <th>Works</th>
-      <th>Follow</th>
+      <th class="px-4 py-2">E-mail</th>
+      <th class="px-4 py-2">Works</th>
+      <th class="px-4 py-2">Follow</th>
     </tr>
   </thead>
   <tbody>
-    <%= render partial: 'member', collection: @members %>
+  <% if @search %>
+    <%= render partial: 'member', collection: @search %>
+    <% else %>
+        <%= render partial: 'member', collection: @members %>
   </tbody>
 </table>
+<% end %>
+</div>
+ 

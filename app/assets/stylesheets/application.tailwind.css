@@ -305,11 +305,24 @@
   margin-top: 5em;
 }
 
-#linkTag {
-  /* object-fit: contain;
-  background-size: contain; */
+.count {
+  text-align: center;
 }
-#mainView {
-  /* background-size: cover; */
-  /* width: 300px; */
+
+.container {
+  margin: auto;
+  text-align: center;
+  margin-top: 5em;
+}
+
+.test {
+  padding-left: 1em;
+}
+
+.button_to {
+  padding: 0.4em;
+}
+
+.graph {
+  margin: 3em;
 }

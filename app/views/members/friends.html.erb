@@ -1,10 +1,11 @@
+<div class="container block p-6 max-w-md">
 <% if @some %>
   <table class="table-auto">
   <thead>
     <tr>
-      <th>E-mail</th>
-      <th>Works</th>
-      <th>Links</th>
+      <th class="px-4 py-2">E-mail</th>
+      <th class="px-4 py-2">Works</th>
+      <th class="px-4 py-2">Links</th>
     </tr>
   </thead>
   <tbody>
@@ -15,3 +16,4 @@
 No friends! Start following?
 <%= link_to 'See all Members', members_path %>
 <% end %>
+</div>

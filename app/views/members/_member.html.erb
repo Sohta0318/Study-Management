@@ -1,7 +1,13 @@
 
 
-<tr>
-      <td><%= member.email%></td>
-      <td><%= member.works.count%></td>
-      <td><%= button_to 'Add to friend', members_path(friend: member),method: :post, :disabled => @current_user.friendships.exists?(friend_id: member) %></td>
+<tr  class="bg-gray-100">
+      <td class="border px-4 py-2"><%= member.email%></td>
+      <td class="border px-4 py-2 count"><%= member.works.count%></td>
+      <% if current_user.friendships.where(friend_id:member).exists? %>
+      <td class="border px-4 py-2"><button disabled class="bg-blue-500 text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed">following...</button></td>
+      <% else %>
+         <td class='pb-0'><%= button_to 'Add friend', members_path(friend: member),method: :post,class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-full", :disabled => @current_user.friendships.exists?(friend_id: member) %></td>
+      <% end %>
     </tr>
+
+     

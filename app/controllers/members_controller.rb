@@ -3,6 +3,8 @@ class MembersController < ApplicationController
   def index
   @members = User.where.not(id: current_user)
   @current_user = current_user
+  @search = User.where('email LIKE ?', "%#{params[:search]}%") if params[:search].present?
+
   end
   def create
     friend = User.find(params[:friend])
@@ -42,5 +44,6 @@ class MembersController < ApplicationController
     friend = User.find(params[:id])
     works = friend.works
     @work_data = works.group_by_day(:created_at).sum(:hours)
+    @kinds = friend.works.group(:health).count
   end
 end

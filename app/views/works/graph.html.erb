@@ -1,2 +1,11 @@
-<h1>All your work</h1>
-<%= line_chart @work_data, xtitle: "Date", ytitle: "Hours" %>
+
+<div class='mx-auto px-4'>
+<div class="graph">
+<h1 >Area chart</h1>
+<%= area_chart @work_data, xtitle: "Date", ytitle: "Hours" %>
+</div>
+<div class="graph">
+<h1>Pie Chart</h1>
+<%= pie_chart @kinds %>
+</div>
+</div>
