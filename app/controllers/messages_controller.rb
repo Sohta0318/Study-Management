@@ -1,24 +1,18 @@
 class MessagesController < ApplicationController
   def index
     @message = Message.new
-    user = User.first
-    @messages = user.messages
-    @userName = params[:name]
+    @messages = current_user.messages
   end
-  def show; end
-  def edit; end
-  def destroy; end
 def create 
-  @userName = params[:name]
-  user = User.first
-  message = user.messages.build(message_params)
+
+  message = current_user.messages.build(message_params)
+  message.friend_id = User.last
   if message.save
 redirect_to messages_path 
+  else
+    redirect_to root_path
   end
 
-  def has_user
-
-  end
 end
 
 private 

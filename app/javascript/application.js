@@ -156,12 +156,3 @@ if (document.getElementById("outer3")) {
 //   }
 // }
 
-// message
-const output = document.getElementById("paragraph");
-if (output) {
-  output.innerText = "What is you name?";
-  const button = document.getElementById("button");
-  button.addEventListener("click", () => {
-    output.innerText = "Please input your email";
-  });
-}
