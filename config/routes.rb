@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   root "home#index"
   resources :works
   get 'graph', to: 'works#graph'
-  get 'messages', to: 'messages#index'
+  get 'messages/:id', to: 'messages#index', as: :id
   post 'messages', to: 'messages#create'
   resources :members
   get 'friends', to: 'members#friends'

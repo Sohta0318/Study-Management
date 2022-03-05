@@ -3,8 +3,8 @@
 <div class="message-container">
 <%= render @messages %>
 </div>
-  <%= form_with model: @message  do |f|%>
+  <%= form_with model: @message, url: messages_path(friend: @friend)  do |f|%>
         <%=f.text_field :message%>
-        <%=f.button id: 'button'%>
+        <%=f.button id: 'button' %>
         <% end %>
         </div>
